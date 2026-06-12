@@ -6,6 +6,18 @@
     <title>Blog - Django</title>
 </head>
 <body>
+    <header>
+        <h1>Blog en Django</h1>
+    </header>
 
+    <main>
+        {% for post in posts %}
+            <div>
+                <h2><a href="">{{ post.title }}</a></h2>
+                <p style="font-size: 12px;"><i>Publicado: {{post.published_date}}</i></p>
+                <p>{{ post.text|linebreaksbr }}</p>
+            </div>
+        {% endfor %}
+    </main>
 </body>
 </html>
